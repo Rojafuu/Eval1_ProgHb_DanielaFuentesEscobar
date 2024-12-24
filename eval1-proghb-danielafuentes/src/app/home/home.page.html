@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Figuras Geométricas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-select (ionChange)="manejarSeleccionFigura($event)" label="Escoja una Figura Geométrica">
+        <ion-select-option value="circulo">Circulo</ion-select-option>
+        <ion-select-option value="triangulo">Triangulo</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+  <app-circulo *ngIf="esCirculo()"/>
+  <app-triangulo *ngIf="esTriangulo()"/>
+  </ion-item>
+</ion-content>
+
+
+
+
+
+
+
+
